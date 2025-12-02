@@ -1,0 +1,58 @@
+@mixin font($var1,$var2,$var3,$var4){
+    font-weight: $var1;
+    font-style: $var2;
+    font-size: $var3;
+    color: $var4;
+}
+
+.sec4-main {
+    height: 900px;
+    background-color: var(--second-color);
+
+    .sec4-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 284px;
+
+        h1 {
+            font-family: "Inter", sans-serif;
+            @include font(700,bold,54px,var(--main-color));
+            // font-weight: 700;
+            // font-style: bold;
+            // font-size: 54px;
+            // color: var(--main-color);
+            line-height: 160%;
+            vertical-align: middle;
+        }
+    }
+
+    .sec4-cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+// Планшет
+
+@media(min-width:601px) and (max-width:1199px) {}
+
+// Телефон
+
+@media(max-width:600px) {
+    .sec4-main{
+        height: 1400px;
+        .sec4-wrap{
+            height: 180px;
+            h1{
+                font-size: 40px;
+            }
+        }
+        .sec4-cards{
+            flex-direction: column;
+            width: 350px;
+            margin-left: 70px
+        }
+    }
+}

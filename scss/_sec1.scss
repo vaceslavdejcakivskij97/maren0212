@@ -1,0 +1,109 @@
+@mixin font($var1,$var2,$var3,$var4){
+    font-weight: $var1;
+    font-style: $var2;
+    font-size: $var3;
+    color: $var4;
+}
+
+.sec1-main {
+    height: 910px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#F5F5F5, #60A2B8);
+
+    .sec1-wrap {
+        margin-left: 90px;
+
+        h1 {
+            font-family: "Inter", sans-serif;
+            @include font(700,bold,48px,var(--text-triple-color));
+            // font-weight: 700;
+            // font-style: bold;
+            // font-size: 48px;
+            // color: var(--text-triple-color);
+            line-height: 130%;
+            vertical-align: middle;
+            margin-bottom: 40.25px;
+        }
+
+        p {
+            font-family: "Inter", sans-serif;
+            @include font(700,regular,18px,var(--text-second-color));
+            // font-weight: 700;
+            // font-style: regular;
+            // font-size: 18px;
+            // color: var(--text-second-color);
+            line-height: 180%;
+            margin-bottom: 40.25px;
+            width: 540px;
+        }
+
+        button {
+            background-color: var(--second-color);
+            width: 258.72px;
+            height: 57.03px;
+            font-family: "Inter", sans-serif;
+            @include font(700,bold,18px,var(--main-color));
+            // font-weight: 700;
+            // font-style: bold;
+            // font-size: 18px;
+            // color: var(--main-color);
+            line-height: 160%;
+            border: 0px solid;
+        }
+    }
+}
+
+.sec1-img {
+    .limon {
+        position: absolute;
+        top: 730.69px;
+        left: 910px;
+    }
+}
+
+// Планшет
+
+@media(min-width:601px) and (max-width:1199px) {}
+
+// Телефон
+
+@media(max-width:600px){
+    .sec1-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        max-width: 600px auto;
+        height: 1120px;
+        text-align: center;
+        .sec1-wrap{
+            padding-left: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 10px;
+            h1{
+                max-width: 400px;
+                padding: 20px;
+            }
+            p{
+                padding: 20px;
+                max-width: 400px;
+            }
+            button{
+                max-width: 258.72px;
+            }
+        }
+        .sec1-img{
+            .plate{
+                max-width: 400px;
+                margin-top: 55px;
+            }
+            .limon{
+                display: none;
+            }
+        }
+    }
+}

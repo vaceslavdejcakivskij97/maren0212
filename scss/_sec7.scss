@@ -1,0 +1,78 @@
+@mixin font($var1,$var2,$var3,$var4){
+    font-weight: $var1;
+    font-style: $var2;
+    font-size: $var3;
+    color: $var4;
+}
+
+.sec7-main {
+    height: 1053px;
+
+    .sec7-main1 {
+        padding-top: 120px;
+        display: flex;
+
+        .sec7-wrap {
+            margin-top: 26.01px;
+            margin-left: 70px;
+
+            .sec7-text {
+
+                h1 {
+                    margin-left: 82px;
+                    font-family: "Inter", sans-serif;
+                    @include font(700,bold,54px,#7B3838);
+                    // font-weight: 700;
+                    // font-style: bold;
+                    // font-size: 54px;
+                    line-height: 160%;
+                    // color: #7B3838;
+                }
+
+                p {
+                    width: 748px;
+                    height: 116px;
+                    font-family: "Inter", sans-serif;
+                    @include font(400,regular,18px,var(--text-second-color));
+                    // font-weight: 400;
+                    // font-style: regular;
+                    // font-size: 18px;
+                    line-height: 160%;
+                    // color: var(--text-second-color);
+                }
+            }
+
+            .sec7-cards {
+                margin-left: 55px;
+                display: grid;
+                grid-template-columns: 175px 175px 175px;
+                grid-template-rows: 228px 228px;
+                column-gap: 79px;
+                row-gap: 51px;
+                text-align: center;
+
+                h5 {
+                    margin-top: 15px;
+                    font-family: "Inter", sans-serif;
+                    @include font(500,medium,24px,#7B3838);
+                    // font-weight: 500;
+                    // font-style: medium;
+                    // font-size: 24px;
+                    line-height: 160%;
+                    vertical-align: middle;
+                    // color: #7B3838;
+                }
+            }
+        }
+    }
+}
+
+// Планшет
+
+@media(min-width:601px) and (max-width:1199px) {}
+
+// Телефон
+
+@media(max-width:600px){
+
+}

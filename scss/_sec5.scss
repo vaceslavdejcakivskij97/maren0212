@@ -1,0 +1,97 @@
+@mixin font($var1,$var2,$var3,$var4){
+    font-weight: $var1;
+    font-style: $var2;
+    font-size: $var3;
+    color: $var4;
+}
+
+.sec5-main {
+    height: 762px;
+    display: flex;
+
+    .sec5-wrap {
+        margin-top: 120px;
+        margin-left: 90px;
+
+        h1 {
+            font-family: "Inter", sans-serif;
+            @include font(700,bold,54px,#7B3838);
+            // font-weight: 700;
+            // font-style: bold;
+            // font-size: 54px;
+            line-height: 160%;
+            vertical-align: middle;
+            // color: #7B3838;
+            margin-bottom: 39px;
+        }
+
+        .p1 {
+            font-family: "Inter", sans-serif;
+            @include font(700,bold,18px,var(--text-second-color));
+            // font-weight: 700;
+            // font-style: bold;
+            // font-size: 18px;
+            line-height: 160%;
+            vertical-align: middle;
+            // color: var(--text-second-color);
+            margin-bottom: 39.59px;
+        }
+
+        .sec5-card {
+            display: flex;
+            align-items: center;
+            gap: 20.25px;
+
+            .p2 {
+                font-family: "Inter", sans-serif;
+                @include font(700,bold,24px,#7B3838);
+                // font-weight: 700;
+                // font-style: bold;
+                // font-size: 24px;
+                line-height: 160%;
+                vertical-align: middle;
+                // color: #7B3838;
+
+                span {
+                    font-family: "Inter", sans-serif;
+                    @include font(700,bold,16px,#5E5656);
+                    // font-weight: 700;
+                    // font-style: bold;
+                    // font-size: 16px;
+                    line-height: 160%;
+                    vertical-align: middle;
+                    // color: #5E5656;
+                }
+            }
+        }
+    }
+
+    .sec5-img {
+        margin-top: 120px;
+        margin-right: 90px;
+    }
+}
+// Планшет
+
+@media(min-width:601px) and (max-width:1199px) {}
+
+// Телефон
+
+@media(max-width:600px) {
+    .sec5-main{
+        height: 900px;
+        .sec5-wrap{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 60px;
+            .p1{
+                text-align: center;
+            }
+        }
+
+        .sec5-img{
+            display: none;
+        }
+    }
+}

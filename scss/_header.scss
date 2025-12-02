@@ -1,0 +1,89 @@
+@mixin font($var1,$var2,$var3,$var4){
+    font-weight: $var1;
+    font-style: $var2;
+    font-size: $var3;
+    color: $var4;
+}
+
+.header-wrap {
+    background-color: var(--main-color);
+    height: 90.11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 182px;
+
+        h2 {
+            font-family: "Inter", sans-serif;
+            @include font(700,bold,24px,var(--text-main-color))
+            // font-weight: 700;
+            // font-style: bold;
+            // font-size: 24px;
+            // color: var(--text-main-color);
+        }
+    }
+
+    .header-menu {
+        display: flex;
+        gap: 70px;
+
+        a {
+            font-family: "Inter", sans-serif;
+            @include font(700,bold,16px,var(--text-main-color))
+            // font-weight: 700;
+            // font-style: bold;
+            // font-size: 16px;
+            // color: var(--text-main-color);
+        }
+    }
+
+    .social {
+        margin-left: 266px;
+    }
+
+    .burger {
+        display: none;
+        padding-top: 30px;
+        position: absolute;
+        top: 20px;
+
+        div {
+            width: 30px;
+            height: 3px;
+            background-color: black;
+            margin-bottom: 4px;
+            margin-right: 10px;
+        }
+    }
+}
+
+// Планшет
+
+@media(min-width:601px) and (max-width:1199px) {}
+
+// Телефон
+
+@media(max-width:600px) {
+    .header-wrap {
+        .logo {
+            margin-right: 0px;
+        }
+
+        .header-menu {
+            display: none;
+        }
+
+        .social {
+            display: none;
+        }
+
+        .burger {
+            display: block;
+        }
+    }
+}

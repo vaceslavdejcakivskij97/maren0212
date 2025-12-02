@@ -1,0 +1,89 @@
+@mixin font($var1,$var2,$var3,$var4){
+    font-weight: $var1;
+    font-style: $var2;
+    font-size: $var3;
+    color: $var4;
+}
+
+.sec3-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 707px;
+
+    .sec3-img {
+        padding-left: 90px;
+    }
+
+    .sec3-wrap {
+        padding-right: 90px;
+        margin-left: 120px;
+
+        h1 {
+            font-family: "Inter", sans-serif;
+            @include font(700,bold,40px,#7B3838);
+            // font-weight: 700;
+            // font-style: bold;
+            // font-size: 40px;
+            // color: #7B3838;
+            line-height: 160%;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-family: "Inter", sans-serif;
+            @include font(400,regular,16px,var(--text-second-color));
+            // font-weight: 400;
+            // font-style: regular;
+            // font-size: 16px;
+            // color: var(--text-second-color);
+            vertical-align: middle;
+            line-height: 160%;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: var(--second-color);
+            width: 228.74px;
+            height: 57px;
+            font-family: "Inter", sans-serif;
+            @include font(700,bold,14px,var(--main-color));
+            // font-weight: 700;
+            // font-style: bold;
+            // font-size: 14px;
+            // color: var(--main-color);
+            line-height: 160%;
+            vertical-align: middle;
+            border: 0px solid;
+        }
+    }
+}
+
+// Планшет
+
+@media(min-width:601px) and (max-width:1199px) {}
+
+// Телефон
+
+@media(max-width:600px) {
+    .sec3-main{
+        height: 950px;
+        flex-direction: column;
+        justify-content: center;
+        .sec3-img{
+            img{
+                width: 600px;
+            }
+        }
+        .sec3-wrap{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-right: 0px;
+            margin-left: 50px;
+            h1{
+                text-align: center;
+            }
+        }
+    }
+}

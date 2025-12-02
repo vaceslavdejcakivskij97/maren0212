@@ -1,0 +1,70 @@
+@mixin font($var1,$var2,$var3,$var4){
+    font-weight: $var1;
+    font-style: $var2;
+    font-size: $var3;
+    color: $var4;
+}
+
+.footer-main {
+    height: 468px;
+
+    .footer-head {
+        text-align: center;
+
+        h1 {
+            font-family: "Inter", sans-serif;
+            @include font(700,bold,36px,var(--text-second-color));
+            // font-weight: 700;
+            // font-style: bold;
+            // font-size: 36px;
+            line-height: 160%;
+            vertical-align: middle;
+            // color: var(--text-second-color);
+        }
+    }
+
+    .footer-cards {
+        margin-top: 62px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 130px;
+
+        .footer-card {
+            display: grid;
+            place-items: center;
+            text-align: center;
+            h5 {
+                margin-top: 5px;
+                font-family: "Inter", sans-serif;
+                @include font(700,bold,24px,var(--text-second-color));
+                // font-weight: 700;
+                // font-style: bold;
+                // font-size: 24px;
+                line-height: 160%;
+                vertical-align: middle;
+                // color: var(--text-second-color);
+            }
+
+            hr {
+                margin-top: 25px;
+                width: 100px;
+                height: 0px;
+                border: 1px solid var(--text-triple-color);
+            }
+
+            h6 {
+                margin-top: 15px;
+                font-family: "Inter", sans-serif;
+                @include font(500,medium,18px,var(--text-second-color));
+                // font-weight: 500;
+                // font-style: medium;
+                // font-size: 18px;
+                line-height: 160%;
+                vertical-align: middle;
+                // color: var(--text-second-color);
+            }
+
+        }
+    }
+}
