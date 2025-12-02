@@ -1,4 +1,4 @@
-@mixin font($var1,$var2,$var3,$var4){
+@mixin font($var1, $var2, $var3, $var4) {
     font-weight: $var1;
     font-style: $var2;
     font-size: $var3;
@@ -21,7 +21,7 @@
                 h1 {
                     margin-left: 82px;
                     font-family: "Inter", sans-serif;
-                    @include font(700,bold,54px,#7B3838);
+                    @include font(700, bold, 54px, #7B3838);
                     // font-weight: 700;
                     // font-style: bold;
                     // font-size: 54px;
@@ -33,7 +33,7 @@
                     width: 748px;
                     height: 116px;
                     font-family: "Inter", sans-serif;
-                    @include font(400,regular,18px,var(--text-second-color));
+                    @include font(400, regular, 18px, var(--text-second-color));
                     // font-weight: 400;
                     // font-style: regular;
                     // font-size: 18px;
@@ -54,7 +54,7 @@
                 h5 {
                     margin-top: 15px;
                     font-family: "Inter", sans-serif;
-                    @include font(500,medium,24px,#7B3838);
+                    @include font(500, medium, 24px, #7B3838);
                     // font-weight: 500;
                     // font-style: medium;
                     // font-size: 24px;
@@ -73,6 +73,45 @@
 
 // Телефон
 
-@media(max-width:600px){
+@media(max-width:600px) {
+    .sec7-main {
+        max-width: 600px;
+        height: 2900px;
 
+        .sec7-main1 {
+            flex-direction: column;
+
+            .sec7-img {
+                img {
+                    width: 600px;
+                }
+            }
+
+            .sec7-wrap {
+
+                .sec7-text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h1 {
+                        font-size: 45px;
+                        text-align: center;
+                        margin-left: 0px;
+                    }
+                    p{
+                        text-align: center;
+                        width: 400px;
+                        height: auto;
+                    }
+                }
+
+                .sec7-cards {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-left: 0px;
+                }
+            }
+        }
+    }
 }

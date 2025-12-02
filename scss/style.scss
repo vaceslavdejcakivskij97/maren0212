@@ -28,3 +28,15 @@ a {
 ul {
     list-style: none;
 }
+
+// Планшет
+
+@media(min-width:601px) and (max-width:1199px) {}
+
+// Телефон
+
+@media(max-width:600px) {
+    .container{
+        max-width: 600px;
+    }
+}
